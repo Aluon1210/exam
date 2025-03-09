@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Căn giữa theo chiều ngang */
+    justify-content: center;  /* Căn giữa theo chiều dọc */
+    min-height: 100vh;  /* Đảm bảo chiều cao của container ít nhất bằng chiều cao của màn hình */
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    gap: 2px;
+    margin-top: 20px;
+}
+
+
+.sudoku-cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sudoku-cell input {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.sudoku-cell:focus-within {
+    background-color: #e0f7fa;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#game-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d32f2f;
+}
